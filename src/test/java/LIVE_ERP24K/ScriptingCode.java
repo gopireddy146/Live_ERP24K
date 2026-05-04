@@ -208,7 +208,7 @@ public class ScriptingCode extends ReusedMethods {
         sleep(1);
     }
 
-    // --------- MULTIPLE GENERATE BARCODE (Weight) ---------
+    // --------- MULTIPLE GENERATE BARCODE (Weight) ---------------
     public void multiplegenerateBarcode_Wt() throws InterruptedException, AWTException {
         Actions action = new Actions(driver);
 
