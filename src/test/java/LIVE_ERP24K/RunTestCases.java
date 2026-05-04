@@ -13,7 +13,7 @@ public class RunTestCases extends OpeningBrowser {
 	    code.login();
 	    code.inventory();
 	   // code.singlegenerateBarcode_Wt();
-	    // code.multiplegenerateBarcode_Wt();
+	     code.multiplegenerateBarcode_Wt();
 	  //  code.dashboard();
 //	   code.Estimation();
 //	   code.more();

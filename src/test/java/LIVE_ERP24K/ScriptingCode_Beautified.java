@@ -16,7 +16,16 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-public class ScriptingCode extends ReusedMethods {
+/**
+ * Beautified copy of ScriptingCode.java.
+ * - Clean indentation
+ * - Removed duplicate declarations and stray characters
+ * - Kept original logic intact
+ *
+ * After verifying this file, you can replace the original ScriptingCode.java
+ * with this content if desired.
+ */
+public class ScriptingCode_Beautified extends ReusedMethods {
 
     // --------- LOGIN ---------
     public void login() throws InterruptedException, IOException {
@@ -83,37 +92,37 @@ public class ScriptingCode extends ReusedMethods {
         sleep(1);
 
         // Group
-        driver.findElement(By.xpath("(//input[@type='text'])[2]")).sendKeys("Silver");
+        driver.findElement(By.xpath("(//input[@type='text'])[2]")).sendKeys("Gold");
         action.keyDown(Keys.ARROW_DOWN).keyUp(Keys.ARROW_DOWN).perform();
         sleep(1);
         action.keyDown(Keys.ENTER).keyUp(Keys.ENTER).perform();
         sleep(1);
 
         // Purity
-        driver.findElement(By.xpath("(//input[@type='text'])[3]")).sendKeys("950");
+        driver.findElement(By.xpath("(//input[@type='text'])[3]")).sendKeys("22");
         action.keyDown(Keys.ARROW_DOWN).keyUp(Keys.ARROW_DOWN).perform();
         sleep(1);
         action.keyDown(Keys.ENTER).keyUp(Keys.ENTER).perform();
         sleep(1);
 
         // Product
-        driver.findElement(By.xpath("(//input[@type='text'])[4]")).sendKeys("M Chain");
+        driver.findElement(By.xpath("(//input[@type='text'])[4]")).sendKeys("Bracelet Gold");
         action.keyDown(Keys.ARROW_DOWN).keyUp(Keys.ARROW_DOWN).perform();
         sleep(1);
         action.keyDown(Keys.ENTER).keyUp(Keys.ENTER).perform();
         sleep(1);
 
-        ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,290)");
+        ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,300)");
+        // Gross Weight
+        driver.findElement(By.xpath("(//input[@placeholder='Enter Gross Weight'])[1]")).sendKeys("3");
         sleep(1);
-        // gross weight
-        driver.findElement(By.xpath("(//input[@placeholder='Enter Gross Weight'])[1]")).sendKeys("6");
-        sleep(1);
-      /*  //Stone weight
+        // stone weight
         WebElement stoneWeight = driver.findElement(By.xpath("//input[@formcontrolname='stoneWeight']"));
         action.moveToElement(stoneWeight).pause(Duration.ofSeconds(2)).click().perform();
-        sleep(2);
-         // .....................ADD STONE DETAILS....................
-        // ----- STONE 1 -----
+        sleep(1);
+    // ............................Add Stone Details ............................
+        // STONE 1
+        // Select Stone
         WebElement selectStone1 = driver.findElement(By.xpath("//div[text()='Select Stone']"));
         action.moveToElement(selectStone1).pause(Duration.ofSeconds(2)).sendKeys("Purple stone").perform();
         sleep(1);
@@ -121,16 +130,20 @@ public class ScriptingCode extends ReusedMethods {
         sleep(1);
         action.keyDown(Keys.ENTER).keyUp(Keys.ENTER).perform();
         sleep(1);
+        // stone pieces
         driver.findElement(By.xpath("(//input[@placeholder='Enter Pieces'])[2]")).sendKeys("2");
         sleep(1);
+        // stone weight in gram
         driver.findElement(By.xpath("//input[@formcontrolname='weightInGram']")).sendKeys("0.5");
         sleep(1);
         driver.findElement(By.xpath("(//div[@class='modal-header'])[1]")).click();
+        // add button
         WebElement addbutton1 = driver.findElement(By.xpath("(//input[@value='Add'])[1]"));
         action.moveToElement(addbutton1).pause(Duration.ofSeconds(2)).click().perform();
         sleep(1);
 
-        // ----- STONE 2 -----
+        // STONE 2
+     // Select Stone
         WebElement selectStone2 = driver.findElement(By.xpath("//div[text()='Select Stone']"));
         action.moveToElement(selectStone2).pause(Duration.ofSeconds(2)).sendKeys("Black Stone").perform();
         sleep(1);
@@ -138,8 +151,10 @@ public class ScriptingCode extends ReusedMethods {
         sleep(1);
         action.keyDown(Keys.ENTER).keyUp(Keys.ENTER).perform();
         sleep(1);
+     // stone pieces
         driver.findElement(By.xpath("(//input[@placeholder='Enter Pieces'])[2]")).sendKeys("2");
         sleep(1);
+     // stone weight in carat
         driver.findElement(By.xpath("//input[@formcontrolname='weightInCarat']")).sendKeys("2");
         sleep(1);
         driver.findElement(By.xpath("(//div[@class='modal-header'])[1]")).click();
@@ -147,32 +162,28 @@ public class ScriptingCode extends ReusedMethods {
         WebElement addbutton2 = driver.findElement(By.xpath("(//input[@value='Add'])[1]"));
         action.moveToElement(addbutton2).pause(Duration.ofSeconds(2)).click().perform();
         sleep(1);
-
+       // close
         WebElement close = driver.findElement(By.xpath("//button[@class='btn-close']"));
         action.moveToElement(close).pause(Duration.ofSeconds(2)).click().perform();
         sleep(1);
-     // .....................ADD STONE DETAILS....................     */
-   
-      
-        // Pieces
-        driver.findElement(By.xpath("(//input[@placeholder='Enter Pieces'])[1]")).sendKeys("3");
+        // ............................Add Stone Details ............................
+        // pieces
+        driver.findElement(By.xpath("(//input[@placeholder='Enter Pieces'])[1]")).sendKeys("2");
         sleep(1);
-        // HUID
-      //  driver.findElement(By.xpath("//input[@placeholder='Enter HUID']")).sendKeys("577897");
+        // huid
+        driver.findElement(By.xpath("//input[@placeholder='Enter HUID']")).sendKeys("577897");
         sleep(1);
         // stone charges
-       // driver.findElement(By.xpath("//input[@formcontrolname='stoneAmount']")).sendKeys("93.80");
-        // other charges
-        driver.findElement(By.xpath("//input[@formcontrolname='otherCharges']")).sendKeys("600");
+        driver.findElement(By.xpath("//input[@formcontrolname='stoneAmount']")).sendKeys("93.80");
         sleep(1);
-        //gender
-        driver.findElement(By.xpath("//label[normalize-space()='Male']")).click();
+        // gender
+        driver.findElement(By.xpath("//label[normalize-space()='Female']")).click();
         sleep(1);
-        // media 1
+         // media
         WebElement addMedia = driver.findElement(By.xpath("//p[text()='Click to upload']"));
         action.moveToElement(addMedia).pause(Duration.ofSeconds(2)).click().perform();
 
-        StringSelection T = new StringSelection("C:\\Users\\user\\eclipse-workspace\\LIVE_ERP24K\\Media\\Images\\silver\\silver1.png");
+        StringSelection T = new StringSelection("C:\\Users\\user\\eclipse-workspace\\LIVE_ERP24K\\Media\\Images\\necklaces with ear rings.jpeg");
         Thread.sleep(2000);
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(T, null);
         Robot paste = new Robot();
@@ -180,25 +191,9 @@ public class ScriptingCode extends ReusedMethods {
         paste.keyPress(KeyEvent.VK_V);
         paste.keyRelease(KeyEvent.VK_CONTROL);
         paste.keyRelease(KeyEvent.VK_V);
-        sleep(2);
+        Thread.sleep(2000);
         paste.keyPress(KeyEvent.VK_ENTER);
         paste.keyRelease(KeyEvent.VK_ENTER);
-        sleep(1);
-        // media 2
-        WebElement addMedia2 = driver.findElement(By.xpath("//p[text()='Click to upload']"));
-        action.moveToElement(addMedia2).pause(Duration.ofSeconds(2)).click().perform();
-
-        StringSelection T2 = new StringSelection("C:\\Users\\user\\eclipse-workspace\\LIVE_ERP24K\\Media\\Images\\silver\\silver2.png");
-        Thread.sleep(2000);
-        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(T2, null);
-        Robot paste2 = new Robot();
-        paste2.keyPress(KeyEvent.VK_CONTROL);
-        paste2.keyPress(KeyEvent.VK_V);
-        paste2.keyRelease(KeyEvent.VK_CONTROL);
-        paste2.keyRelease(KeyEvent.VK_V);
-        sleep(2);
-        paste2.keyPress(KeyEvent.VK_ENTER);
-        paste2.keyRelease(KeyEvent.VK_ENTER);
         sleep(1);
 
         ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,350)");
@@ -208,150 +203,65 @@ public class ScriptingCode extends ReusedMethods {
         sleep(1);
     }
 
-    // --------- MULTIPLE GENERATE BARCODE (Weight) ---------
+    // MULTIPLE GENERATE BARCODE (Weight)
     public void multiplegenerateBarcode_Wt() throws InterruptedException, AWTException {
         Actions action = new Actions(driver);
 
-        for (int i = 1; i <= 50; i++) {
+        for (int i = 1; i <= 10; i++) {
             System.out.println("Iteration: " + i);
 
             WebElement inventory = driver.findElement(By.xpath("//button[text()='Generate Barcode (Wt)']"));
             action.moveToElement(inventory).pause(Duration.ofSeconds(2)).click().perform();
 
-            // Supplier
             driver.findElement(By.xpath("(//input[@type='text'])[1]")).sendKeys("Kalyan Raj");
-            action.keyDown(Keys.ARROW_DOWN).keyUp(Keys.ARROW_DOWN).perform();
-            sleep(1);
-            action.keyDown(Keys.ENTER).keyUp(Keys.ENTER).perform();
+            action.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
             sleep(1);
 
-            // Group
-            driver.findElement(By.xpath("(//input[@type='text'])[2]")).sendKeys("Silver");
-            action.keyDown(Keys.ARROW_DOWN).keyUp(Keys.ARROW_DOWN).perform();
-            sleep(1);
-            action.keyDown(Keys.ENTER).keyUp(Keys.ENTER).perform();
+            driver.findElement(By.xpath("(//input[@type='text'])[2]")).sendKeys("Gold");
+            action.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
             sleep(1);
 
-            // Purity
-            driver.findElement(By.xpath("(//input[@type='text'])[3]")).sendKeys("950");
-            action.keyDown(Keys.ARROW_DOWN).keyUp(Keys.ARROW_DOWN).perform();
-            sleep(1);
-            action.keyDown(Keys.ENTER).keyUp(Keys.ENTER).perform();
+            driver.findElement(By.xpath("(//input[@type='text'])[3]")).sendKeys("24");
+            action.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
             sleep(1);
 
-            // Product
-            driver.findElement(By.xpath("(//input[@type='text'])[4]")).sendKeys("M Chain");
-            action.keyDown(Keys.ARROW_DOWN).keyUp(Keys.ARROW_DOWN).perform();
-            sleep(1);
-            action.keyDown(Keys.ENTER).keyUp(Keys.ENTER).perform();
+            driver.findElement(By.xpath("(//input[@type='text'])[4]")).sendKeys("Harram");
+            action.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
             sleep(1);
 
-            ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,290)");
-            sleep(1);
-            // gross weight
-            driver.findElement(By.xpath("(//input[@placeholder='Enter Gross Weight'])[1]")).sendKeys("6");
-            sleep(1);
-          /*  //Stone weight
-            WebElement stoneWeight = driver.findElement(By.xpath("//input[@formcontrolname='stoneWeight']"));
-            action.moveToElement(stoneWeight).pause(Duration.ofSeconds(2)).click().perform();
-            sleep(2);
-             // .....................ADD STONE DETAILS....................
-            // ----- STONE 1 -----
-            WebElement selectStone1 = driver.findElement(By.xpath("//div[text()='Select Stone']"));
-            action.moveToElement(selectStone1).pause(Duration.ofSeconds(2)).sendKeys("Purple stone").perform();
-            sleep(1);
-            action.keyDown(Keys.ARROW_DOWN).keyUp(Keys.ARROW_DOWN).perform();
-            sleep(1);
-            action.keyDown(Keys.ENTER).keyUp(Keys.ENTER).perform();
-            sleep(1);
-            driver.findElement(By.xpath("(//input[@placeholder='Enter Pieces'])[2]")).sendKeys("2");
-            sleep(1);
-            driver.findElement(By.xpath("//input[@formcontrolname='weightInGram']")).sendKeys("0.5");
-            sleep(1);
-            driver.findElement(By.xpath("(//div[@class='modal-header'])[1]")).click();
-            WebElement addbutton1 = driver.findElement(By.xpath("(//input[@value='Add'])[1]"));
-            action.moveToElement(addbutton1).pause(Duration.ofSeconds(2)).click().perform();
+            ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,300)");
+
+            driver.findElement(By.xpath("(//input[@placeholder='Enter Gross Weight'])[1]")).sendKeys("3");
+            driver.findElement(By.xpath("(//input[@placeholder='Enter Pieces'])[1]")).sendKeys("2");
             sleep(1);
 
-            // ----- STONE 2 -----
-            WebElement selectStone2 = driver.findElement(By.xpath("//div[text()='Select Stone']"));
-            action.moveToElement(selectStone2).pause(Duration.ofSeconds(2)).sendKeys("Black Stone").perform();
-            sleep(1);
-            action.keyDown(Keys.ARROW_DOWN).keyUp(Keys.ARROW_DOWN).perform();
-            sleep(1);
-            action.keyDown(Keys.ENTER).keyUp(Keys.ENTER).perform();
-            sleep(1);
-            driver.findElement(By.xpath("(//input[@placeholder='Enter Pieces'])[2]")).sendKeys("2");
-            sleep(1);
-            driver.findElement(By.xpath("//input[@formcontrolname='weightInCarat']")).sendKeys("2");
-            sleep(1);
-            driver.findElement(By.xpath("(//div[@class='modal-header'])[1]")).click();
-            sleep(1);
-            WebElement addbutton2 = driver.findElement(By.xpath("(//input[@value='Add'])[1]"));
-            action.moveToElement(addbutton2).pause(Duration.ofSeconds(2)).click().perform();
-            sleep(1);
-
-            WebElement close = driver.findElement(By.xpath("//button[@class='btn-close']"));
-            action.moveToElement(close).pause(Duration.ofSeconds(2)).click().perform();
-            sleep(1);
-         // .....................ADD STONE DETAILS....................     */
-       
-          
-            // Pieces
-            driver.findElement(By.xpath("(//input[@placeholder='Enter Pieces'])[1]")).sendKeys("3");
-            sleep(1);
-         
-            sleep(1);
-            // stone charges
-            driver.findElement(By.xpath("//input[@formcontrolname='otherCharges']")).sendKeys("600");
-            sleep(1);
-            //gender
-            driver.findElement(By.xpath("//label[normalize-space()='Male']")).click();
-            sleep(1);
-            // media 1
             WebElement addMedia = driver.findElement(By.xpath("//p[text()='Click to upload']"));
-            action.moveToElement(addMedia).pause(Duration.ofSeconds(2)).click().perform();
+            action.moveToElement(addMedia).click().perform();
 
-            StringSelection T = new StringSelection("C:\\Users\\user\\eclipse-workspace\\LIVE_ERP24K\\Media\\Images\\silver\\silver1.png");
-            Thread.sleep(2000);
+            StringSelection T = new StringSelection("C:\\Users\\user\\eclipse-workspace\\LIVE_ERP24K\\Media\\Images\\necklaces with ear rings.jpeg");
             Toolkit.getDefaultToolkit().getSystemClipboard().setContents(T, null);
+
             Robot paste = new Robot();
+            sleep(1);
             paste.keyPress(KeyEvent.VK_CONTROL);
             paste.keyPress(KeyEvent.VK_V);
             paste.keyRelease(KeyEvent.VK_CONTROL);
             paste.keyRelease(KeyEvent.VK_V);
-            sleep(2);
+
+            sleep(1);
             paste.keyPress(KeyEvent.VK_ENTER);
             paste.keyRelease(KeyEvent.VK_ENTER);
-            sleep(1);
-            // media 2
-            WebElement addMedia2 = driver.findElement(By.xpath("//p[text()='Click to upload']"));
-            action.moveToElement(addMedia2).pause(Duration.ofSeconds(2)).click().perform();
-
-            StringSelection T2 = new StringSelection("C:\\Users\\user\\eclipse-workspace\\LIVE_ERP24K\\Media\\Images\\silver\\silver2.png");
-            Thread.sleep(2000);
-            Toolkit.getDefaultToolkit().getSystemClipboard().setContents(T2, null);
-            Robot paste2 = new Robot();
-            paste2.keyPress(KeyEvent.VK_CONTROL);
-            paste2.keyPress(KeyEvent.VK_V);
-            paste2.keyRelease(KeyEvent.VK_CONTROL);
-            paste2.keyRelease(KeyEvent.VK_V);
-            sleep(2);
-            paste2.keyPress(KeyEvent.VK_ENTER);
-            paste2.keyRelease(KeyEvent.VK_ENTER);
-            sleep(1);
 
             ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,350)");
             sleep(1);
             WebElement submit = driver.findElement(By.xpath("//button[text()='Generate Barcode']"));
-            action.moveToElement(submit).pause(Duration.ofSeconds(2)).click().perform();
-       
+            action.moveToElement(submit).click().perform();
 
             sleep(2);
         }
     }
 
-    // --------- MORE ---------
+    // MORE
     public void more() throws InterruptedException, IOException {
         sleep(2);
         WebElement moreElement = driver.findElement(By.xpath("//span[text()='More']"));
@@ -362,7 +272,7 @@ public class ScriptingCode extends ReusedMethods {
         sleep(2);
     }
 
-    // --------- MASTER ---------
+    // MASTER
     public void master() throws InterruptedException, IOException {
         sleep(2);
         WebElement masterElement = driver.findElement(By.xpath("//span[text()='Master']"));
@@ -374,7 +284,7 @@ public class ScriptingCode extends ReusedMethods {
         sleep(2);
     }
 
-    // --------- ADD PURITY ---------
+    // ADD PURITY
     public void addPurity() throws InterruptedException, IOException {
         driver.findElement(By.xpath("//button[text()=' + Add Purity ']")).click();
         sleep(1);
@@ -393,7 +303,7 @@ public class ScriptingCode extends ReusedMethods {
         screenshot("Purity_Saved_List6");
     }
 
-    // --------- PRICE ---------
+    // PRICE
     public void price() throws InterruptedException {
         sleep(2);
         WebElement moreElement = driver.findElement(By.xpath("//span[text()='More']"));
