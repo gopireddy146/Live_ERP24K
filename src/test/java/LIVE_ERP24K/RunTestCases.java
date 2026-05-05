@@ -12,7 +12,7 @@ public class RunTestCases extends OpeningBrowser {
 	  ScriptingCode code = new ScriptingCode();
 	    code.login();
 	    code.inventory();
-	   // code.singlegenerateBarcode_Wt();
+	  // code.singlegenerateBarcode_Wt();
 	     code.multiplegenerateBarcode_Wt();
 	  //  code.dashboard();
 //	   code.Estimation();

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="LIVE_ERP24K.RunTestCases">
+      <class name="LIVE_ERP24K.ScriptingCode">
         <methods>
           <include name="afterClass"/>
           <include name="toRunTestCases"/>
           <include name="beforeMethod"/>
         </methods>
-      </class> <!-- LIVE_ERP24K.RunTestCases -->
+      </class> <!-- LIVE_ERP24K.ScriptingCode -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
